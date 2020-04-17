@@ -1,3 +1,11 @@
+/**
+ * Bangle.js Numerals Clock
+ *
+ * + Original Author: Raik M. https://github.com/ps-igel
+ * + Created: April 2020
+ * + see README.md for details
+ */
+
 var numerals = {
   0:[[9,1,82,1,90,9,90,92,82,100,9,100,1,92,1,9],[30,25,61,25,69,33,69,67,61,75,30,75,22,67,22,33]],
   1:[[59,1,82,1,90,9,90,92,82,100,73,100,65,92,65,27,59,27,51,19,51,9]],
@@ -54,8 +62,7 @@ function draw(drawMode){
   let h2 = (_12hour?d.getHours()%12:d.getHours())%10;
   let m1 = Math.floor(d.getMinutes()/10);
   let m2 = d.getMinutes()%10;
-
-  if (h1>=1){
+   if (h1>=1){
     if(h2>2){
       h1 = h1 - 1;
       h2 = h2 - 2;}
@@ -75,7 +82,7 @@ function draw(drawMode){
   drawNum(h2,0x1f,1,0,eval(drawMode));
   drawNum(m1,_mCol[0],0,1,eval(drawMode));
   drawNum(m2,_mCol[0],1,1,eval(drawMode));
-  }
+}
 
 Bangle.setLCDMode();
 
