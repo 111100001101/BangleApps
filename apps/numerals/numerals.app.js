@@ -1,11 +1,3 @@
-/**
- * Bangle.js Numerals Clock
- *
- * + Original Author: Raik M. https://github.com/ps-igel
- * + Created: April 2020
- * + see README.md for details
- */
-
 var numerals = {
   0:[[9,1,82,1,90,9,90,92,82,100,9,100,1,92,1,9],[30,25,61,25,69,33,69,67,61,75,30,75,22,67,22,33]],
   1:[[59,1,82,1,90,9,90,92,82,100,73,100,65,92,65,27,59,27,51,19,51,9]],
