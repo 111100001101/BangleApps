@@ -58,8 +58,8 @@ function drawNum(num,col,x,y,func){
 
 function draw(drawMode){
   let d = new Date();
-  let h1 = 2;//Math.floor((_12hour?d.getHours()%12:d.getHours())/10);
-  let h2 = 1;//(_12hour?d.getHours()%12:d.getHours())%10;
+  let h1 = Math.floor((_12hour?d.getHours()%12:d.getHours())/10);
+  let h2 = (_12hour?d.getHours()%12:d.getHours())%10;
   let m1 = Math.floor(d.getMinutes()/10);
   let m2 = d.getMinutes()%10;
 
