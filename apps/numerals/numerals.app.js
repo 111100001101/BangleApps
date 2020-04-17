@@ -76,6 +76,8 @@ function draw(drawMode){
   }
   else if(h1 == 2){
     if(h2 == 2){
+	    h1 = 1;
+	    h2 = 0;
     }}
   g.clearRect(0,24,240,240);
   if (h1 !== 0){
