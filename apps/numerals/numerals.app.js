@@ -58,8 +58,8 @@ function drawNum(num,col,x,y,func){
 
 function draw(drawMode){
   let d = new Date();
-  let h1 = Math.floor((_12hour?d.getHours()%12:d.getHours())/10);
-  let h2 = (_12hour?d.getHours()%12:d.getHours())%10;
+  let h1 = 2;//Math.floor((_12hour?d.getHours()%12:d.getHours())/10);
+  let h2 = 1;//(_12hour?d.getHours()%12:d.getHours())%10;
   let m1 = Math.floor(d.getMinutes()/10);
   let m2 = d.getMinutes()%10;
 
@@ -67,25 +67,23 @@ function draw(drawMode){
     if(h2>2){
       h1 = h1 - 1;
       h2 = h2 - 2;}
-      }
-  else if (h2 == 1 ){
-    if(h1 == 2){
-    h1 = 0;
-    h2 = 9;}
-    
-  }
-  else if(h1 == 2){
-    if(h2 == 2){
+    else if(h2 == 0){
+        h2=0;
+        h1=1;}
+    else if(h2 == 2){
 	    h1 = 1;
-	    h2 = 0;
-    }}
+	    h2 = 0;}
+    else if(h2 == 1){
+        h1 = 0;
+        h2 = 9;}}
+
   g.clearRect(0,24,240,240);
   if (h1 !== 0){
     drawNum(h1,0x1f,0,0,eval(drawMode));}
   drawNum(h2,0x1f,1,0,eval(drawMode));
   drawNum(m1,_mCol[0],0,1,eval(drawMode));
   drawNum(m2,_mCol[0],1,1,eval(drawMode));
-}
+  }
 
 Bangle.setLCDMode();
 
